@@ -9,7 +9,6 @@ namespace Dominio
     public class Stock
     {
         public int idStock { get; set; }
-        public Producto idproducto { get; set; }
         public DateTime fecha_Ingreso { get; set; }
         public int cantidadIngresada { get; set; }
         public int stock { get; set; }
