@@ -11,7 +11,7 @@ namespace Negocio
     public class StockNegocio
     {
         private AccesoDatos datos;
-        private AccesoDatos datos2;
+       
         public List<Stock> listaStock() //SUMA EL RESUMEN DE STOCK QUE EXISTE
         {
 
@@ -55,6 +55,7 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
+                
             }
         }
 
@@ -65,7 +66,7 @@ namespace Negocio
             {
                 //string insertar = "values( '" + agregoStock.id + "' , '" + agregoStock.fecha_Ingreso + "' , '" + agregoStock.cantidadIngresada + "' , '" + agregoStock.stock + "')";
                 string insertar = "values( '" + agregoStock.id + "' , getdate() , '" + agregoStock.cantidadIngresada + "' , '" + agregoStock.stock + "')";
-                accesoStock.setearConsulta("insert into StockProductos(idproducto, FECHA_Ingreso, CANTIDAAD, Stock)" + insertar);
+                accesoStock.setearConsulta("insert into StockProductos(idproducto, FECHA_Ingreso, CANTIDAD, Stock)" + insertar);
 
                 accesoStock.ejectutarAccion();
             }
@@ -77,6 +78,7 @@ namespace Negocio
             finally
             {
                 accesoStock.cerrarConexion();
+
             }
         }
 
@@ -125,42 +127,5 @@ namespace Negocio
             }
         }
 
-
-
-        public List<Stock> listaTotal_Stock() //LISTA TOTAL DE LOS STOCKS QUE SE AGREGARONE  era "listaStock"
-        {
-
-            List<Stock> listado2 = new List<Stock>();  //era listado
-            AccesoDatos datos2 = new AccesoDatos();    //era datos
-
-            try
-            {
-                datos2.setearConsulta(" select ID, IDPRODUCTO, FECHA_INGRESO, CANTIDAD, STOCK from stockproductos");
-                datos2.ejecutarLectura();
-                while (datos2.Lector.Read())
-                {
-                    Stock aux2 = new Stock();
-                    aux2.idStock = (int)datos2.Lector["ID"];
-                    aux2.id = ((int)datos2.Lector["IDPRODUCTO"]);
-                    aux2.fecha_Ingreso = (DateTime)datos2.Lector["FECHA_INGRESO"];
-                    aux2.cantidadIngresada = (int)datos2.Lector["CANTIDAD"];
-                    aux2.stock = (int)datos2.Lector["Stock"];
-
-                    listado2.Add(aux2);
-
-                }
-
-                return listado2;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos2.cerrarConexion();
-            }
-        }
     }
 }
