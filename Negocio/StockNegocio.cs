@@ -141,7 +141,7 @@ namespace Negocio
                 {
                     Stock aux2 = new Stock();
                     aux2.idStock = (int)datos2.Lector["ID"];
-                    aux2.idproducto = ((Producto)datos2.Lector["IDPRODUCTO"]);
+                    aux2.id = ((int)datos2.Lector["IDPRODUCTO"]);
                     aux2.fecha_Ingreso = (DateTime)datos2.Lector["FECHA_INGRESO"];
                     aux2.cantidadIngresada = (int)datos2.Lector["CANTIDAD"];
                     aux2.stock = (int)datos2.Lector["Stock"];

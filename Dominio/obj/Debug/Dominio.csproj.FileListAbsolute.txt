@@ -1,6 +1,5 @@
 C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\bin\Debug\Dominio.dll
 C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\bin\Debug\Dominio.pdb
-C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
 C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.dll
 C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.pdb

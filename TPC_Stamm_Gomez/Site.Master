@@ -65,14 +65,15 @@
                         <a class="nav-link" href="Marcas.aspx">Marcas</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <%--<form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                </form>--%>
             </div>
         </nav>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
             </asp:ContentPlaceHolder>
             <hr />
 
@@ -84,7 +85,8 @@
         </div>
 
     </form>
-
+    </body>
+</html>
 
 <%--        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -115,5 +117,4 @@
         </div>
 
     </form>--%>
-</body>
-</html>
+

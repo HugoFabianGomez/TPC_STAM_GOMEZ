@@ -23,7 +23,7 @@ namespace Negocio
                 while (dato.Lector.Read())
                 {
                     Stock aux2 = new Stock();
-                    aux2.id = (int)dato.Lector["ID"];
+                    aux2.idStock = (int)dato.Lector["ID"];
                     aux2.descripcion = (string)dato.Lector["Descripcion"];
                     aux2.fecha_Ingreso = (DateTime)dato.Lector["Fecha"];
                     aux2.cantidadIngresada = (int)dato.Lector["Cantidad"];

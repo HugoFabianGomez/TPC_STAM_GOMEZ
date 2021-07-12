@@ -1,15 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HistorialStock.aspx.cs" Inherits="TPC_Stamm_Gomez.HistorialStock" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<h1> Historial Stock </h1>
-     <div class="container">
+    <h1>Historial Stock </h1>
+    <div class="container">
         <div class="row py-3">
             <div class="col-3 order-2" id="sticky-sidebar">
                 <div class="sticky-top">
                     <div class="nav flex-column">
-                        <div class='col-xs-3'> 
-                             <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Stock</a>
-                             <a href="default.aspx" class="btn btn-primary btn-block" >Stock</a>
+                        <div class='col-xs-3'>
+                            <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Stock</a>
+                            <a href="default.aspx" class="btn btn-primary btn-block">Stock</a>
                         </div>
                     </div>
                 </div>
@@ -23,14 +24,14 @@
                             <th scope="col">Descripcion</th>
                             <th scope="col">Fecha Ingreso</th>
                             <th scope="col">Cantidad Ingresada</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>
                         <%foreach (Dominio.Stock item in historia)
                             {%>
                         <tr>
-                            <th scope="row"><% =item.id %></th>
+                            <th scope="row"><% =item.idStock %></th>
                             <td><% =item.marcas.nombreMarcas%> </td>
                             <td><% =item.descripcion %></td>
                             <td><% =item.fecha_Ingreso.ToShortDateString() %></td>
