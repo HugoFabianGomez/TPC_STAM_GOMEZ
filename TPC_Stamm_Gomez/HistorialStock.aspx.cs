@@ -19,7 +19,6 @@ namespace TPC_Stamm_Gomez
             try
             {
                 historia = conexionBase.List_Historial();//va a la base y me trae todo el stock
-
             }
             catch (Exception ex)
             {

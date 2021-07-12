@@ -41,5 +41,34 @@ namespace TPC_Stamm_Gomez
             }
 
         }
+
+        protected void btn_Emiminar_Click(object sender, EventArgs e)
+        {
+            
+
+        }//PREGUNTAR COMO ELIMINAR ESTE EVENTO
+
+        protected void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            //Stock EliminoStock = new Stock();
+            StockNegocio stockNegocio = new StockNegocio();
+            try
+            {
+                int id  = int.Parse(text_idStock.Text);
+                
+
+
+                stockNegocio.eliminar(id); //conexion return
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Response.Redirect("HistorialStock.aspx");
+            }
+        }
     }
 }

@@ -16,8 +16,8 @@ namespace Negocio
             try
             {
                 dato.setearConsulta("select S.ID ID, P.DESCRIPCION Descripcion, S.FECHA_Ingreso Fecha, S.CANTIDAD Cantidad," +
-                    "M.NOMBRE Marca  from StockProductos S inner join Productos P on S.idproducto = P.ID " +
-                    "inner join Marca M on M.ID = P.IDMarca");
+                                    "M.NOMBRE Marca  from StockProductos S inner join Productos P on S.idproducto = P.ID " +
+                                    "inner join Marca M on M.ID = P.IDMarca");
                 dato.ejecutarLectura();
 
                 while (dato.Lector.Read())

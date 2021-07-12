@@ -8,6 +8,7 @@ using Negocio;
 
 namespace Negocio
 {
+
     public class StockNegocio
     {
         private AccesoDatos datos;
@@ -57,6 +58,28 @@ namespace Negocio
                 datos.cerrarConexion();
                 
             }
+        }
+
+        public void eliminar(Stock id)
+        {
+            
+            datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update stockproductos set estado = 0 where id =" + id);
+                datos.ejectutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+                datos = null;
+            }
+
         }
 
         public void agregar(Stock agregoStock)
@@ -112,7 +135,7 @@ namespace Negocio
             datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Delete from stockproductos where id " + id);
+                datos.setearConsulta("update stockproductos set estado = '0' where id =" + id);
                 datos.ejectutarAccion();
             }
             catch (Exception ex)
@@ -126,6 +149,8 @@ namespace Negocio
                 datos = null;
             }
         }
+
+
 
     }
 }

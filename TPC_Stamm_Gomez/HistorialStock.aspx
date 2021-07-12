@@ -10,6 +10,7 @@
                     <div class="nav flex-column">
                         <div class='col-xs-3'>
                             <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Stock</a>
+                            <a href="EliminarStock.aspx" class="btn btn-primary btn-block">Eliminar Stock</a>
                             <a href="default.aspx" class="btn btn-primary btn-block">Stock</a>
                         </div>
                     </div>
