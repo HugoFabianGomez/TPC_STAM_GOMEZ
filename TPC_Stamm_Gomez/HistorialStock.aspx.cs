@@ -9,16 +9,16 @@ using Negocio;
 
 namespace TPC_Stamm_Gomez
 {
-    public partial class _Default : Page
+    public partial class HistorialStock : System.Web.UI.Page
     {
-        public List<Stock> lista;
+        public List<Stock> historia;
         protected void Page_Load(object sender, EventArgs e)
         {
-            StockNegocio conexionBase = new StockNegocio();
+            HistorialNegocio conexionBase = new HistorialNegocio();
 
             try
             {
-                lista = conexionBase.listaStock();//va a la base y me trae todo el stock
+                historia = conexionBase.List_Historial();//va a la base y me trae todo el stock
 
             }
             catch (Exception ex)
@@ -27,11 +27,6 @@ namespace TPC_Stamm_Gomez
 
                 Response.Redirect("Error.aspx");
             }
-
-        }
-
-        protected void redireccionClick(object sender, EventArgs e)
-        {
 
         }
     }

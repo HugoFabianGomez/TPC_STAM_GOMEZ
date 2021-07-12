@@ -11,7 +11,7 @@ namespace TPC_Stamm_Gomez
 {
 
 
-    public partial class _Default
+    public partial class ListadoProductos
     {
     }
 }

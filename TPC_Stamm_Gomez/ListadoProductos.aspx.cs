@@ -9,29 +9,25 @@ using Negocio;
 
 namespace TPC_Stamm_Gomez
 {
-    public partial class _Default : Page
+    public partial class ListadoProductos : System.Web.UI.Page
     {
-        public List<Stock> lista;
+        public List<Producto> listas;
         protected void Page_Load(object sender, EventArgs e)
         {
-            StockNegocio conexionBase = new StockNegocio();
+            ProductoNegocio negocio = new ProductoNegocio();
 
             try
             {
-                lista = conexionBase.listaStock();//va a la base y me trae todo el stock
+                listas = negocio.listaProducto();//hago la consulta a la base 
 
             }
             catch (Exception ex)
             {
+
                 Session.Add("Error", ex.ToString());
 
                 Response.Redirect("Error.aspx");
             }
-
-        }
-
-        protected void redireccionClick(object sender, EventArgs e)
-        {
 
         }
     }
