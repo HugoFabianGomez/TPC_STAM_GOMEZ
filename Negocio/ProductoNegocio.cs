@@ -46,5 +46,23 @@ namespace Negocio
             }
 
         }
+
+
+        public void agregar(Producto nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string valores = "values (" + nuevo.marcas.idMarcas + " , " + nuevo.categorias.id + ", " + nuevo.presentacion.id + ", '" + nuevo.descripcion + "', " + nuevo.peso + ", " + nuevo.precioUnitario + ", '" + nuevo.urlImagen + "',"+1+")";
+                datos.setearConsulta("INSERT INTO Productos(IDMarca,IDCategoria,IDPresentacion,DESCRIPCION,PESO,PRECIO_UNITARIO,URL_IMAGEN,ESTADO)) " + valores);
+
+                datos.ejectutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

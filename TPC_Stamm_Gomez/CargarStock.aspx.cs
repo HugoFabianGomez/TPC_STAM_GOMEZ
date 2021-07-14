@@ -24,16 +24,16 @@ namespace TPC_Stamm_Gomez
             try
             {
                 nuevoStock.id = int.Parse(text_idproducto.Text);
-                nuevoStock.fecha_Ingreso = DateTime.Parse(text_fechaingreso.Text);
+                //nuevoStock.fecha_Ingreso = DateTime.Parse(text_fechaingreso.Text);
                 nuevoStock.cantidadIngresada = int.Parse(text_cantidad.Text);
                 nuevoStock.stock = int.Parse(text_stock.Text);
 
                 stockNegocio.agregar(nuevoStock); //conexion
             }
-            catch (Exception)
+            catch (Exception )
             {
 
-                throw;
+                throw ;
             }
             finally
             {

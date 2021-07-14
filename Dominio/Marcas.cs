@@ -8,6 +8,7 @@ namespace Dominio
 {
     public class Marcas
     {
+        public Marcas() { }
         public int idMarcas { get; set; }
         public string nombreMarcas { get; set; }
         public Marcas(string descripcion)
@@ -20,6 +21,11 @@ namespace Dominio
         {
             idMarcas = id;
             nombreMarcas = descripcion;
+        }
+
+        public override string ToString()
+        {
+            return nombreMarcas;
         }
     }
 }
