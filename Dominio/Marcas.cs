@@ -22,8 +22,6 @@ namespace Dominio
             nombreMarcas = descripcion;
         }
 
-        public Marcas()
-        {
-        }
+       
     }
 }
