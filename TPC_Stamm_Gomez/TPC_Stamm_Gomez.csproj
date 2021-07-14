@@ -147,7 +147,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="CargaNuevoProducto.aspx" />
+    <Content Include="CargaNuevoProd.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -336,12 +336,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="CargaNuevoProducto.aspx.cs">
-      <DependentUpon>CargaNuevoProducto.aspx</DependentUpon>
+    <Compile Include="CargaNuevoProd.aspx.cs">
+      <DependentUpon>CargaNuevoProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CargaNuevoProducto.aspx.designer.cs">
-      <DependentUpon>CargaNuevoProducto.aspx</DependentUpon>
+    <Compile Include="CargaNuevoProd.aspx.designer.cs">
+      <DependentUpon>CargaNuevoProd.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

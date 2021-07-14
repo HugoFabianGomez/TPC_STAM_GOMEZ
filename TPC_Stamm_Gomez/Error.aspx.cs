@@ -11,6 +11,7 @@ namespace TPC_Stamm_Gomez
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblError.Text = Session["Error"] == null ? "No hay error" : (String)Session["Error"];
 
         }
     }

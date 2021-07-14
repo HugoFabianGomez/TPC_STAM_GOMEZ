@@ -11,16 +11,16 @@ namespace TPC_Stamm_Gomez
 {
 
 
-    public partial class Error
+    public partial class WebForm2
     {
 
         /// <summary>
-        /// lblError control.
+        /// ddlMarcas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMarcas;
     }
 }
