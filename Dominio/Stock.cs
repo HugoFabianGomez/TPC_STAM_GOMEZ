@@ -12,5 +12,7 @@ namespace Dominio
         public DateTime fecha_Ingreso { get; set; }
         public int cantidadIngresada { get; set; }
         public int stock { get; set; }
+        public bool estadoStock { get; set; }
+       
     }
 }

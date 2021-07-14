@@ -18,7 +18,7 @@ namespace TPC_Stamm_Gomez
 
             try
             {
-                listas = negocio.listaProducto();//hago la consulta a la base 
+                listas = negocio.listaProducto();   //hago la consulta a la base 
 
             }
             catch (Exception ex)

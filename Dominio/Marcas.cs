@@ -21,5 +21,9 @@ namespace Dominio
             idMarcas = id;
             nombreMarcas = descripcion;
         }
+
+        public Marcas()
+        {
+        }
     }
 }
