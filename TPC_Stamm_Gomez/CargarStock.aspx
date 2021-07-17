@@ -46,7 +46,7 @@
      <div>   
 
     </div>
-    <asp:Button Text="MOSTRAR REGITRO" ID="btn_Mostrar" OnClick="btn_Mostrar_Click" runat="server" />
+    <%--<asp:Button Text="MOSTRAR REGITRO" ID="btn_Mostrar" OnClick="btn_Mostrar_Click" runat="server" />--%>
     <br />
     <br />
 
