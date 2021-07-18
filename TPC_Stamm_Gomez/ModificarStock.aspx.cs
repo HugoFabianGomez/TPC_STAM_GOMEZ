@@ -19,11 +19,18 @@ namespace TPC_Stamm_Gomez
 
         protected void txtidstock_TextChanged(object sender, EventArgs e)
         {
-            ModificarStock modificarStock = new ModificarStock(); //conexion
+            ModificarStockNegocio modificarStock = new ModificarStockNegocio(); //conexion
+
 
             try
             {
-                UnRegistro = modificarStock.     PROBLEMA NO TRAE AL Listamodificarstock DICE NO EXISTE EN EL CONTEXTO;
+                
+                if((txtidstock.Text) != null)
+                {
+                    int id = int.Parse(txtidstock.Text);
+                    UnRegistro = modificarStock.Listamodificarstock(id);    
+                    //PROBLEMA NO TRAE AL "Listamodificarstock" DICE NO EXISTE EN EL CONTEXTO;
+                }               
 
             }
             catch (Exception ex)

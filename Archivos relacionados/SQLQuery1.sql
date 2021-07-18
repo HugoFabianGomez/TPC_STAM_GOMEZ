@@ -20,3 +20,5 @@ inner join Marca M on M.ID = P.IDMarca
 
 update stockproductos set estado = 1 where id = 43
 select ID, IDPRODUCTO, FECHA_INGRESO, CANTIDAD, STOCK, Estado from stockproductos where id = 46
+
+select s.ID, p.DESCRIPCION, s.FECHA_INGRESO, s.CANTIDAD, s.STOCK, s.ESTADO from stockproductos s inner join Productos p on s.IDProducto=p.ID 
