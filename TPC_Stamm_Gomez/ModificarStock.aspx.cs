@@ -14,7 +14,7 @@ namespace TPC_Stamm_Gomez
         public List<Stock> UnRegistro;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtidstock.Text = (string)"55";
         }
 
         protected void txtidstock_TextChanged(object sender, EventArgs e)
@@ -24,22 +24,32 @@ namespace TPC_Stamm_Gomez
 
             try
             {
-                
-                if((txtidstock.Text) != null)
-                {
-                    int id = int.Parse(txtidstock.Text);
-                    UnRegistro = modificarStock.Listamodificarstock(id);    
-                    //PROBLEMA NO TRAE AL "Listamodificarstock" DICE NO EXISTE EN EL CONTEXTO;
-                }               
+                int id = int.Parse(txtidstock.Text);
+                UnRegistro = modificarStock.Listamodificarstock(id);
+                //PROBLEMA NO TRAE AL "Listamodificarstock" DICE NO EXISTE EN EL CONTEXTO;
 
             }
             catch (Exception ex)
             {
-
                 Session.Add("Error", ex.ToString());
 
                 Response.Redirect("Error.aspx");
             }
+
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_Modificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtidstock_TextChanged1(object sender, EventArgs e)
+        {
 
         }
     }

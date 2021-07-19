@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ModificarStock.aspx.cs" Inherits="TPC_Stamm_Gomez.ModificarStock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h3>Update panel</h3>
+    <h1> MODIFICAR STOCKS</h1>
     <asp:UpdatePanel runat="server">
         <ContentTemplate>
             <asp:Label Text="ID REGISTRO DEL STOCK" runat="server" />
-            <asp:TextBox AutoPostBack="false" runat="server" ID="txtidstock" OnTextChanged="txtidstock_TextChanged" CssClass="form-control" />
+            <asp:TextBox AutoPostBack="true" runat="server" ID="txtidstock" OnTextChanged="txtidstock_TextChanged" CssClass="form-control"/>
 
             <div class="col" id="main">
                 <table class="table">
@@ -21,7 +21,7 @@
                         </tr>
                     </thead>
 
-                        <%foreach (Dominio.Stock item2 in UnRegistro)
+                        <%foreach(Dominio.Stock item2 in UnRegistro)
                             {%>
                         <tr>
                             <th scope="row"><% =item2.idStock %></th>
@@ -33,14 +33,17 @@
                         </tr>
 
                         <%} %>
-                    </tbody>
+                    
                     <br />
                 </table>
-                    <asp:TextBox runat="server" ID="text_idstock" />
-                    <asp:TextBox runat="server" ID="text_descripcion" />
-                    <asp:TextBox runat="server" ID="text_fechaingreso"/>
-                    <asp:TextBox runat="server" ID="text_stock"/>
-                    <asp:TextBox runat="server" ID="text_estadostock"/>
+                    <asp:TextBox runat="server" ID="text_idstock" TextMode="Number" />
+                    <%--<asp:TextBox runat="server" ID="text_descripcion" TextMode=""/>--%>
+                    <asp:TextBox runat="server" ID="text_fechaingreso" TextMode="Date"/>
+                    <asp:TextBox runat="server" ID="text_cantidad" TextMode="Number"/>
+                    <asp:TextBox runat="server" ID="text_stock" TextMode="Number"/>
+                    <%--<asp:TextBox runat="server" ID="text_estadostock" TextMode="Number"/>--%>
+                <br />
+                <asp:Button Text="btn_modificar" ID="btn_Modificar" runat="server" onclick="btn_Modificar_Click"/>
             </div>
 
 

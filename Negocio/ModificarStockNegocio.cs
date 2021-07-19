@@ -18,25 +18,18 @@ namespace Negocio
                 dato1.setearConsulta("select s.ID, s.FECHA_INGRESO, s.CANTIDAD, s.STOCK from stockproductos s inner join Productos p on s.IDProducto=p.ID where s.id ="+ id);
                 dato1.ejecutarLectura();
 
-                if (dato1.Lector.Read())
+                while (dato1.Lector.Read())
                 {
                     Stock aux3 = new Stock();
                     aux3.idStock = (int)dato1.Lector["ID"];
-                    //aux3.descripcion = (string)dato1.Lector["DESCRIPCION"];
+                    aux3.descripcion = (string)dato1.Lector["DESCRIPCION"];
                     aux3.fecha_Ingreso = (DateTime)dato1.Lector["FECHA_INGRESO"];
                     aux3.cantidadIngresada = (int)dato1.Lector["CANTIDAD"];
                     aux3.stock = (int)dato1.Lector["STOCK"];
-                    //aux3.estadoStock = (bool)dato1.Lector["ESTADO"];
-                    
+                    aux3.estadoStock = (bool)dato1.Lector["ESTADO"];
+
                     listamodificar.Add(aux3);
                     
-                    /*text_idstock.Text = (string)dato1.Lector["ID"];
-                    text_ = (string)dato1.Lector["DESCRIPCION"];
-                    text_ = (DateTime)dato1.Lector["FECHA_INGRESO"];
-                    text_ = (int)dato1.Lector["CANTIDAD"];
-                    text_ = (int)dato1.Lector["STOCK"];
-                    text_ = (bool)dato1.Lector["ESTADO"];
-                    */
                 }
                 return listamodificar;
 
