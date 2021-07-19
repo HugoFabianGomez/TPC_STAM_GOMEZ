@@ -8,7 +8,7 @@
                 <div class="sticky-top">
                     <div class="nav flex-column">
                         <div class='col-xs-3'>
-                            <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Nuevo Producto</a>
+                            <a href="CargaNuevoProd.aspx" class="btn btn-primary btn-block">Cargar Nuevo Producto</a>
                             <a href="Default.aspx" class="btn btn-primary btn-block">Volver</a>
                         </div>
                     </div>

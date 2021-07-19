@@ -9,18 +9,29 @@ namespace Dominio
     public class Marcas
     {
         public Marcas() { }
+
         public int idMarcas { get; set; }
         public string nombreMarcas { get; set; }
+
+
+        public void setId(int id)
+        {
+            idMarcas = id;
+        }
         public Marcas(string descripcion)
         {
-
             nombreMarcas = descripcion;
         }
 
-        public Marcas(int id, string descripcion)
+        public Marcas(int id)
         {
             idMarcas = id;
-            nombreMarcas = descripcion;
+        }
+
+        public Marcas(int id, string nombre)
+        {
+            idMarcas = id;
+            nombreMarcas = nombre;
         }
 
         public override string ToString()

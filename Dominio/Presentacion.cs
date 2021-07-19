@@ -9,7 +9,14 @@ namespace Dominio
     public class Presentacion
     {
         public int id { get; set; }
+
+        public Presentacion() { }
         public string descripcion { get; set; }
+
+        public Presentacion(int idPresentaciones)
+        {
+            id = idPresentaciones;
+        }
         public Presentacion(string Descripcion)
         {
             descripcion = Descripcion;

@@ -53,8 +53,15 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values (" + nuevo.marcas.idMarcas + " , " + nuevo.categorias.id + ", " + nuevo.presentacion.id + ", '" + nuevo.descripcion + "', " + nuevo.peso + ", " + nuevo.precioUnitario + ", '" + nuevo.urlImagen + "',"+1+")";
-                datos.setearConsulta("INSERT INTO Productos(IDMarca,IDCategoria,IDPresentacion,DESCRIPCION,PESO,PRECIO_UNITARIO,URL_IMAGEN,ESTADO)) " + valores);
+                datos.setearParametro("@idMarcas", nuevo.marcas.idMarcas);
+                datos.setearParametro("@idCategoria", nuevo.categorias.id);
+                datos.setearParametro("@idPresentacion", nuevo.presentacion.id);
+                datos.setearParametro("@descripcion", nuevo.descripcion);
+                datos.setearParametro("@peso", nuevo.peso);
+                datos.setearParametro("@precio", nuevo.precioUnitario);
+                datos.setearParametro("@estado", 1);
+                datos.setearConsulta("INSERT INTO Productos(IDMarca,IDCategoria,IDPresentacion,DESCRIPCION,PRECIO_UNITARIO,PESO,ESTADO) " +
+                    "values(@idMarcas,@idCategoria,@idPresentacion,@descripcion,@precio,@peso,@estado)");
 
                 datos.ejectutarAccion();
             }

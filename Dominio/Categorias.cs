@@ -11,6 +11,13 @@ namespace Dominio
         public int id { get; set; }
         public string nombreCategoria { get; set; }
 
+        public Categorias() { }
+
+        public Categorias(int idcategoria)
+        {
+            id = idcategoria;
+        }
+
         public Categorias(string NombreCategoria)
         {
             nombreCategoria = NombreCategoria;
