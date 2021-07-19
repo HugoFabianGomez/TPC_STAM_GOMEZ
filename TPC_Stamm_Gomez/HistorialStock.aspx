@@ -9,7 +9,8 @@
                 <div class="sticky-top">
                     <div class="nav flex-column">
                         <div class='col-xs-3'>
-                            <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Eliminar y Modificar Stock</a>
+                            <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar y Eliminar Stock</a>
+                            <a href="ModificarStock.aspx" class="btn btn-primary btn-block">Modificar Stock</a>
                             <a href="default.aspx" class="btn btn-primary btn-block">Total de Stock</a>
                         </div>
                     </div>

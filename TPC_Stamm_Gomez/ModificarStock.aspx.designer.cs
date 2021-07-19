@@ -11,17 +11,26 @@ namespace TPC_Stamm_Gomez
 {
 
 
-    public partial class CargarStock
+    public partial class ModificarStock
     {
 
         /// <summary>
-        /// Control text_idproducto.
+        /// Control txtidstock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox text_idproducto;
+        protected global::System.Web.UI.WebControls.TextBox txtidstock;
+
+        /// <summary>
+        /// Control text_idstock.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox text_idstock;
 
         /// <summary>
         /// Control text_fechaingreso.
@@ -51,30 +60,12 @@ namespace TPC_Stamm_Gomez
         protected global::System.Web.UI.WebControls.TextBox text_stock;
 
         /// <summary>
-        /// Control btn_Agregar.
+        /// Control btn_Modificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Agregar;
-
-        /// <summary>
-        /// Control text_idStock.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox text_idStock;
-
-        /// <summary>
-        /// Control btn_Eliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Eliminar;
+        protected global::System.Web.UI.WebControls.Button btn_Modificar;
     }
 }
