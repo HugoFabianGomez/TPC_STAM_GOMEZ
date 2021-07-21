@@ -22,6 +22,8 @@
     </div>
     <div class="form-group">
 
+        <asp:Button Text="Eliminar" OnClick="Eliminar_Click" runat="server" />
+
     </div>
 
 

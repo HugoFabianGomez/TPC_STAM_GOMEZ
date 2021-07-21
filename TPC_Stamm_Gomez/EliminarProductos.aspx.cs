@@ -17,8 +17,9 @@ namespace TPC_Stamm_Gomez
         {
             if (Request.QueryString["idP"]!= null)
             {
-                int id;
-                id=int.Parse(Request.QueryString["idP"].ToString());
+                
+                int id=int.Parse(Request.QueryString["idP"].ToString());
+                Session["idProducto"] = id;
                 nuevo = conexion.cargarProducto(id);
                 txtMarca.Text = nuevo.marcas.getNombreMarca();
                 txtDescripcion.Text = nuevo.descripcion;
@@ -29,7 +30,10 @@ namespace TPC_Stamm_Gomez
 
         }
 
-       
-
+        protected void Eliminar_Click(object sender, EventArgs e)
+        {
+            int id =  int.Parse(Session["idProducto"].ToString());
+            conexion.eliminarProducto(id);
+        }
     }
 }

@@ -72,12 +72,12 @@ namespace Negocio
             }
         }
 
-        public void eliminarProducto(int idMarca,int idCategoria,int idPresentacion)//Baja loogica
+        public void eliminarProducto(int idProducto)//Baja loogica
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("UPDATE Productos set ESTADO = 0  WHERE IDMarca="+idMarca+" AND IDCategoria="+idCategoria+" AND IDPresentacion="+idPresentacion+"");
+                datos.setearConsulta("UPDATE Productos set ESTADO = 0  WHERE ID="+idProducto+"");
                 datos.ejectutarAccion();              
             }
             catch (Exception ex)
