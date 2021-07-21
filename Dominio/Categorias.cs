@@ -27,5 +27,10 @@ namespace Dominio
             id = Id;
             nombreCategoria = NombreCategoria;
         }
+
+        public string getNombreCategoria()
+        {
+            return nombreCategoria;
+        }
     }
 }

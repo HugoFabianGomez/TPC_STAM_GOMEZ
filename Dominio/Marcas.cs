@@ -34,6 +34,10 @@ namespace Dominio
             nombreMarcas = nombre;
         }
 
+        public string getNombreMarca()
+        {
+            return nombreMarcas;
+        }
         public override string ToString()
         {
             return nombreMarcas;

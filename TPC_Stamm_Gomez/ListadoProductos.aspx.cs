@@ -18,8 +18,8 @@ namespace TPC_Stamm_Gomez
 
             try
             {
-                listas = negocio.listaProducto();   //hago la consulta a la base 
-
+                repetidor.DataSource = negocio.listaProducto(); //hago la consulta a la base 
+                repetidor.DataBind();
             }
             catch (Exception ex)
             {

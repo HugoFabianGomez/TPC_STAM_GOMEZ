@@ -16,3 +16,12 @@ D:\GITHUB 2021\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.dll
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.pdb
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\bin\Debug\Negocio.dll
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\bin\Debug\Negocio.pdb
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\bin\Debug\Dominio.dll
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\bin\Debug\Dominio.pdb
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.dll
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.pdb
+C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache

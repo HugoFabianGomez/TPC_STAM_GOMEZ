@@ -26,5 +26,15 @@ namespace Dominio
             id = Id;
             descripcion = Descripcion;
         }
+
+        public string getDescripcion()
+        {
+            return descripcion;
+        }
+
+        public override string ToString()
+        {
+            return descripcion;
+        }
     }
 }

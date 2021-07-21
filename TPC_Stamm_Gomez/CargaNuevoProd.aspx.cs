@@ -31,16 +31,20 @@ namespace TPC_Stamm_Gomez
                     ddlMarcas.DataValueField = "idMarcas";
                     ddlMarcas.DataTextField = "nombreMarcas";
                     ddlMarcas.DataBind();
+                    ddlMarcas.Items.Insert(0,new ListItem ("Seleccione una Marca"));
 
                     ddlCategoria.DataSource = catNegocio.listar();
                     ddlCategoria.DataValueField = "id";
                     ddlCategoria.DataTextField = "nombreCategoria";
                     ddlCategoria.DataBind();
+                    ddlCategoria.Items.Insert(0, new ListItem("Seleccione una Categoria"));
 
                     ddlPresentacion.DataSource = presentacionNegocio.listar();
                     ddlPresentacion.DataValueField = "id";
                     ddlPresentacion.DataTextField = "descripcion";
                     ddlPresentacion.DataBind();
+                    ddlPresentacion.Items.Insert(0, new ListItem("Presentacion"));
+
 
                 }
 

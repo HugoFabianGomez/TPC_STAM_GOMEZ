@@ -20,7 +20,7 @@ namespace Negocio
             {
                 conexion.ConnectionString = "data source=.\\SQLEXPRESS; initial catalog=StokDepot_StammGomez; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT P.ID,P.DESCRIPCION,P.PRECIO_UNITARIO,C.NOMBRECATEGORIA,M.NOMBRE from Productos P INNER join Marca M ON M.ID = P.IDMarca INNER JOIN Categoria C ON C.ID = P.IDCategoria GROUP BY P.ID,P.DESCRIPCION,P.PRECIO_UNITARIO,C.NOMBRECATEGORIA,M.NOMBRE";
+                comando.CommandText = "SELECT P.ID,P.DESCRIPCION,P.PRECIO_UNITARIO,C.NOMBRECATEGORIA,M.NOMBRE from Productos P INNER join Marca M ON M.ID = P.IDMarca INNER JOIN Categoria C ON C.ID = P.IDCategoria where P.ESTADO=1  GROUP BY P.ID,P.DESCRIPCION,P.PRECIO_UNITARIO,C.NOMBRECATEGORIA,M.NOMBRE";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
@@ -70,6 +70,55 @@ namespace Negocio
 
                 throw ex;
             }
+        }
+
+        public void eliminarProducto(int idMarca,int idCategoria,int idPresentacion)//Baja loogica
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE Productos set ESTADO = 0  WHERE IDMarca="+idMarca+" AND IDCategoria="+idCategoria+" AND IDPresentacion="+idPresentacion+"");
+                datos.ejectutarAccion();              
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public Producto cargarProducto(int idProd)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearParametro("@id", idProd);
+                datos.setearConsulta("SELECT P.ID, P.DESCRIPCION, P.PRECIO_UNITARIO, C.NOMBRECATEGORIA, M.NOMBRE ,PRE.DESCRIPCION AS Presentacion from Productos P INNER join Marca M ON M.ID = P.IDMarca INNER JOIN Categoria C ON C.ID = P.IDCategoria INNER JOIN Presentacion Pre ON PRE.ID=P.IDPresentacion  where P.ID = @id  GROUP BY P.ID, P.DESCRIPCION, P.PRECIO_UNITARIO, C.NOMBRECATEGORIA, M.NOMBRE,PRE.DESCRIPCION");
+                datos.ejecutarLectura();
+                datos.Lector.Read();
+
+                Producto aux = new Producto();
+                aux.id = (int)datos.Lector["ID"];
+                aux.descripcion = (string)datos.Lector["DESCRIPCION"];
+                aux.precioUnitario = (decimal)datos.Lector["PRECIO_UNITARIO"];
+                aux.categorias = new Categorias((string)datos.Lector["NOMBRECATEGORIA"]);
+                aux.categorias.nombreCategoria = (string)datos.Lector["NOMBRECATEGORIA"];
+                aux.marcas = new Marcas((string)datos.Lector["NOMBRE"]);
+                aux.marcas.nombreMarcas = (string)datos.Lector["NOMBRE"];
+                aux.presentacion = new Presentacion((string)datos.Lector["Presentacion"]);
+                aux.presentacion.descripcion = (string)datos.Lector["Presentacion"];
+                return aux;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
     }
 }

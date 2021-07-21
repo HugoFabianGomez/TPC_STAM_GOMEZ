@@ -45,11 +45,7 @@
     <Compile Include="CategoriaNegocio.cs" />
     <Compile Include="HistorialNegocio.cs" />
     <Compile Include="MarcasNegocio.cs" />
-<<<<<<< HEAD
     <Compile Include="PresentacionNegocio.cs" />
-=======
-    <Compile Include="ModificarStockNegocio.cs" />
->>>>>>> d7a83eb796d648dfb5ddc644bf0a8b8dfb9f7faf
     <Compile Include="ProductoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StockNegocio.cs" />

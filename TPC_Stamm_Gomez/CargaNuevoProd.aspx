@@ -32,7 +32,7 @@
         </div>
 
 
-        <asp:Button Text="Confirmar" runat="server" ID="btnCargar"  OnClick="btnCargar_Click" />
+        <asp:Button Text="Confirmar" runat="server" ID="btnCargar" OnClick="btnCargar_Click" />
 
     </div>
 </asp:Content>

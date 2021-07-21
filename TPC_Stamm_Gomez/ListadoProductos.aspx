@@ -25,21 +25,27 @@
                             <th scope="col">Descripcion</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Categoria</th>
+                            <th scope="col">Acciones</th>           
                         </tr>
                     </thead>
                     <tbody>
+                        <asp:Repeater runat="server" ID="repetidor">
+                            <ItemTemplate> 
+                                <tr>
+                                    <td><%#Eval("id") %></td>
+                                    <td><%# DataBinder.Eval(Container.DataItem,"marcas.nombreMarcas")%> </td>
+                                    <td><%#Eval("descripcion") %></td>
+                                    <td><%#Eval("precioUnitario") %></td>
+                                    <td><%# DataBinder.Eval(Container.DataItem,"categorias.nombreCategoria")%> </td>
+                                    <td>
+                                        <a class="btn btn-sm btn-outline-info" href='EliminarProductos.aspx?idP=<%#Eval("id") %>'><i title="Eliminar" class="fas fa-trash-alt"></i></a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i title="Modificar datos" class="far fa-edit"></i></a>
+                                    </td>
 
-                        <%foreach (Dominio.Producto item in listas)
-                            {%>
-                        <tr>
-                            <th scope="row"><% =item.id %></th>
-                            <td><% =item.marcas.nombreMarcas%>
-                            <td><%=item.descripcion %></td>
-                            <td><%=item.precioUnitario.ToString("0.00") %></td>
-                            <td><%=item.categorias.nombreCategoria %></td>
-                        </tr>
+                                </tr>
 
-                        <%} %>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </tbody>
                 </table>
             </div>
