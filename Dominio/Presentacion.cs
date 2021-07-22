@@ -32,6 +32,11 @@ namespace Dominio
             return descripcion;
         }
 
+        public int getId()
+        {
+            return id;
+        }
+
         public override string ToString()
         {
             return descripcion;

@@ -38,6 +38,11 @@ namespace Dominio
         {
             return nombreMarcas;
         }
+
+        public int getId()
+        {
+            return idMarcas;
+        }
         public override string ToString()
         {
             return nombreMarcas;

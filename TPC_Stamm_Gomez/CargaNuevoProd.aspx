@@ -23,10 +23,6 @@
             <asp:DropDownList runat="server" ID="ddlPresentacion" OnSelectedIndexChanged="ddlPresentacion_SelectedIndexChanged"></asp:DropDownList>
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Peso</label>
-            <asp:TextBox runat="server" ID="txtPeso" />
-        </div>
-        <div class="form-group">
             <label for="formGroupExampleInput2">Precio Unitario</label>
             <asp:TextBox runat="server" ID="txtPrecio" />
         </div>

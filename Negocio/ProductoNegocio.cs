@@ -57,11 +57,10 @@ namespace Negocio
                 datos.setearParametro("@idCategoria", nuevo.categorias.id);
                 datos.setearParametro("@idPresentacion", nuevo.presentacion.id);
                 datos.setearParametro("@descripcion", nuevo.descripcion);
-                datos.setearParametro("@peso", nuevo.peso);
                 datos.setearParametro("@precio", nuevo.precioUnitario);
                 datos.setearParametro("@estado", 1);
-                datos.setearConsulta("INSERT INTO Productos(IDMarca,IDCategoria,IDPresentacion,DESCRIPCION,PRECIO_UNITARIO,PESO,ESTADO) " +
-                    "values(@idMarcas,@idCategoria,@idPresentacion,@descripcion,@precio,@peso,@estado)");
+                datos.setearConsulta("INSERT INTO Productos(IDMarca,IDCategoria,IDPresentacion,DESCRIPCION,PRECIO_UNITARIO,ESTADO) " +
+                    "values(@idMarcas,@idCategoria,@idPresentacion,@descripcion,@precio,@estado)");
 
                 datos.ejectutarAccion();
             }
@@ -97,7 +96,7 @@ namespace Negocio
             try
             {
                 datos.setearParametro("@id", idProd);
-                datos.setearConsulta("SELECT P.ID, P.DESCRIPCION, P.PRECIO_UNITARIO, C.NOMBRECATEGORIA, M.NOMBRE ,PRE.DESCRIPCION AS Presentacion from Productos P INNER join Marca M ON M.ID = P.IDMarca INNER JOIN Categoria C ON C.ID = P.IDCategoria INNER JOIN Presentacion Pre ON PRE.ID=P.IDPresentacion  where P.ID = @id  GROUP BY P.ID, P.DESCRIPCION, P.PRECIO_UNITARIO, C.NOMBRECATEGORIA, M.NOMBRE,PRE.DESCRIPCION");
+                datos.setearConsulta("SELECT P.ID,C.ID idCategoria,M.ID idMarca,Pre.ID idPresentacion, P.DESCRIPCION, P.PRECIO_UNITARIO, C.NOMBRECATEGORIA, M.NOMBRE ,PRE.DESCRIPCION AS Presentacion from Productos P INNER join Marca M ON M.ID = P.IDMarca INNER JOIN Categoria C ON C.ID = P.IDCategoria INNER JOIN Presentacion Pre ON PRE.ID=P.IDPresentacion  where P.ID = @id  GROUP BY P.ID, P.DESCRIPCION, P.PRECIO_UNITARIO, C.NOMBRECATEGORIA, M.NOMBRE,PRE.DESCRIPCION,C.ID,M.ID,Pre.ID");
                 datos.ejecutarLectura();
                 datos.Lector.Read();
 
@@ -111,6 +110,9 @@ namespace Negocio
                 aux.marcas.nombreMarcas = (string)datos.Lector["NOMBRE"];
                 aux.presentacion = new Presentacion((string)datos.Lector["Presentacion"]);
                 aux.presentacion.descripcion = (string)datos.Lector["Presentacion"];
+                aux.categorias.id = (int)datos.Lector["idCategoria"];
+                aux.marcas.idMarcas = (int)datos.Lector["idMarca"];
+                aux.presentacion.id = (int)datos.Lector["idPresentacion"];
                 return aux;
             }
             catch (Exception ex)
@@ -119,6 +121,30 @@ namespace Negocio
                 throw ex;
             }
 
+        }
+
+
+        public void modificar(Producto nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearParametro("@id",nuevo.id);
+                datos.setearParametro("@idMarcas", nuevo.marcas.idMarcas);
+                datos.setearParametro("@idCategoria", nuevo.categorias.id);
+                datos.setearParametro("@idPresentacion", nuevo.presentacion.id);
+                datos.setearParametro("@descripcion", nuevo.descripcion);
+                datos.setearParametro("@precio", nuevo.precioUnitario);
+                datos.setearParametro("@estado", 1);
+                datos.setearConsulta("UPDATE Productos set  IDMarca=@idMarcas ,IDCategoria=@idCategoria ,IDPresentacion=@idPresentacion ,DESCRIPCION=@descripcion,PRECIO_UNITARIO=@precio,ESTADO=@estado where ID=@id");
+
+                datos.ejectutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

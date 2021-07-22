@@ -11,17 +11,17 @@ namespace TPC_Stamm_Gomez
 {
 
 
-    public partial class WebForm2
+    public partial class ModificarProducto
     {
 
         /// <summary>
-        /// ddlMarcas control.
+        /// txtMarca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMarcas;
+        protected global::System.Web.UI.WebControls.TextBox txtMarca;
 
         /// <summary>
         /// txtDescripcion control.
@@ -33,22 +33,22 @@ namespace TPC_Stamm_Gomez
         protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
 
         /// <summary>
-        /// ddlCategoria control.
+        /// txtPresentacion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        protected global::System.Web.UI.WebControls.TextBox txtPresentacion;
 
         /// <summary>
-        /// ddlPresentacion control.
+        /// txtCategoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPresentacion;
+        protected global::System.Web.UI.WebControls.TextBox txtCategoria;
 
         /// <summary>
         /// txtPrecio control.
@@ -60,12 +60,48 @@ namespace TPC_Stamm_Gomez
         protected global::System.Web.UI.WebControls.TextBox txtPrecio;
 
         /// <summary>
-        /// btnCargar control.
+        /// ddlMarcas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCargar;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMarcas;
+
+        /// <summary>
+        /// txtDescripcion1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcion1;
+
+        /// <summary>
+        /// ddlPresentacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPresentacion;
+
+        /// <summary>
+        /// ddlCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+
+        /// <summary>
+        /// txtPrecio1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPrecio1;
     }
 }
