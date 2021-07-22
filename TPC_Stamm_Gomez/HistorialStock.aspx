@@ -35,10 +35,11 @@
                                     <td><%#Eval("idStock") %></td>
                                     <td><%# DataBinder.Eval(Container.DataItem,"marcas.nombreMarcas")%> </td>
                                     <td><%#Eval("descripcion") %></td>
-                                    <td><%# DataBinder.Eval(Container.DataItem,"fecha_Ingreso") %></td>
+                                    <%--<td><%# DataBinder.Eval(Container.DataItem,"fecha_Ingreso") %></td>--%>
+                                    <td><%#Eval("fecha_Ingreso","{0: dd/MM/yyyy}") %> </td>
                                     <td><%#Eval("cantidadIngresada") %> </td>
                                     <td>
-                                        <a class="btn btn-sm btn-outline-info" href='EliminarProductos.aspx?idP=<%#Eval("idStock") %>'><i title="Eliminar" class="fas fa-trash-alt"></i></a>
+                                        <a class="btn btn-sm btn-outline-info" href='EliminarStock.aspx?idS=<%#Eval("idStock") %>'><i title="Eliminar" class="fas fa-trash-alt"></i></a>
                                         <a class="btn btn-sm btn-outline-secondary" href="#"><i title="Modificar datos" class="far fa-edit"></i></a>
                                     </td>
                                 </tr>

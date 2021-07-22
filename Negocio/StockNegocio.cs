@@ -27,7 +27,7 @@ namespace Negocio
                                     "inner join Marca M ON M.ID = P.IDMarca " +
                                     "INNER JOIN Presentacion PR ON PR.ID = P.IDPresentacion " +
                                     "inner join Categoria C on C.ID = P.IDCategoria " +
-                                    "GROUP by  P.ID, M.NOMBRE, PR.DESCRIPCION, C.NOMBRECATEGORIA,P.DESCRIPCION ");
+                                    "Where S.Estado = 1 GROUP by  P.ID, M.NOMBRE, PR.DESCRIPCION, C.NOMBRECATEGORIA,P.DESCRIPCION ");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -148,6 +148,37 @@ namespace Negocio
                 datos.cerrarConexion();
                 datos = null;
             }
+        }
+
+        public Stock traigoidStock(int IdStock)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearParametro("@id", IdStock);
+                datos.setearConsulta("select s.ID, p.DESCRIPCION, s.FECHA_Ingreso, s.CANTIDAD, s.Estado from stockProductos s inner join Productos p on s.IDProducto=p.ID where s.id = " + IdStock);
+                datos.ejecutarLectura();
+                datos.Lector.Read();
+
+                Stock aux = new Stock();
+                aux.idStock = (int)datos.Lector["ID"];
+                aux.descripcion = (string)datos.Lector["DESCRIPCION"];
+                aux.fecha_Ingreso = (DateTime)datos.Lector["FECHA_Ingreso"];
+                //aux.categorias = new Categorias((string)datos.Lector["NOMBRECATEGORIA"]);
+                aux.cantidadIngresada = (int)datos.Lector["CANTIDAD"];
+                aux.estadoStock = (bool)datos.Lector["Estado"];
+                return aux;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
         }
 
 

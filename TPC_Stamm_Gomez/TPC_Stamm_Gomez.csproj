@@ -119,6 +119,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="EliminarProductos.aspx" />
+    <Content Include="EliminarStock.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -291,6 +292,13 @@
     </Compile>
     <Compile Include="EliminarProductos.aspx.designer.cs">
       <DependentUpon>EliminarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarStock.aspx.cs">
+      <DependentUpon>EliminarStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarStock.aspx.designer.cs">
+      <DependentUpon>EliminarStock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
