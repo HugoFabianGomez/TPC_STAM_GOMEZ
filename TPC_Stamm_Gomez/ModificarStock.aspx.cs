@@ -14,18 +14,12 @@ namespace TPC_Stamm_Gomez
         public List<Stock> UnRegistro;
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtidstock.Text = (string)"55";
-        }
-
-        protected void txtidstock_TextChanged(object sender, EventArgs e)
-        {
-            ModificarStockNegocio modificarStock = new ModificarStockNegocio(); //conexion
-
+             ModificoStockNegocio modificoStock = new ModificoStockNegocio(); //conexion
 
             try
             {
-                int id = int.Parse(txtidstock.Text);
-                UnRegistro = modificarStock.Listamodificarstock(id);
+                int id = 0;// int.Parse(txtidstock.Text);
+                UnRegistro = modificoStock.Listamodificarstock(id);
                 //PROBLEMA NO TRAE AL "Listamodificarstock" DICE NO EXISTE EN EL CONTEXTO;
 
             }
@@ -35,6 +29,12 @@ namespace TPC_Stamm_Gomez
 
                 Response.Redirect("Error.aspx");
             }
+
+        }
+
+        protected void txtidstock_TextChanged(object sender, EventArgs e)
+        {
+           
 
         }
 
