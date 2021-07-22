@@ -11,23 +11,22 @@ namespace TPC_Stamm_Gomez
 {
     public partial class ModificarStock : System.Web.UI.Page
     {
-        public List<Stock> UnRegistro;
+        public Stock nuevo = new Stock();
+        StockNegocio conexion = new StockNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ModificoStockNegocio modificoStock = new ModificoStockNegocio(); //conexion
-
-            try
+            if (Request.QueryString["idS"] != null)
             {
-                int id = 0;// int.Parse(txtidstock.Text);
-                UnRegistro = modificoStock.Listamodificarstock(id);
-                //PROBLEMA NO TRAE AL "Listamodificarstock" DICE NO EXISTE EN EL CONTEXTO;
 
-            }
-            catch (Exception ex)
-            {
-                Session.Add("Error", ex.ToString());
-
-                Response.Redirect("Error.aspx");
+                int IdStock = int.Parse(Request.QueryString["idS"].ToString());
+                Session["idStock"] = IdStock;
+                nuevo = conexion.traigoidStock(IdStock);
+                text_idstock.Text = nuevo.idStock.ToString();
+                text_descripcion.Text = nuevo.descripcion;
+                text_fechaingreso.Text = nuevo.fecha_Ingreso.ToShortDateString();
+                text_cantidad.Text = nuevo.cantidadIngresada.ToString();
+                text_stock.Text = nuevo.stock.ToString();
+                text_estadostock.Text = nuevo.estadoStock.ToString();
             }
         }
 
@@ -45,19 +44,9 @@ namespace TPC_Stamm_Gomez
 
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {
-            StockNegocio stockNegocio = new StockNegocio();
-            int id = int.Parse(txtidstock.Text);
-            try
-            {
-                
-            
-            }
-            catch (Exception)
-            {
+            int idStock = int.Parse(text_idstock.Text);
 
-                throw;
-            }
-            
+            //conexion.modificar(idStock);
         }
 
         protected void txtidstock_TextChanged1(object sender, EventArgs e)

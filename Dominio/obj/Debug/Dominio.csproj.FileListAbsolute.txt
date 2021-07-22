@@ -5,7 +5,6 @@ C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\obj\Debug\Domin
 C:\Users\walte\OneDrive\Documentos\GitHub\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.pdb
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Dominio\bin\Debug\Dominio.dll
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Dominio\bin\Debug\Dominio.pdb
-D:\GITHUB 2021\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.dll
 D:\GITHUB 2021\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.pdb

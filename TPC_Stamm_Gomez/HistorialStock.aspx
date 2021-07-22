@@ -39,8 +39,8 @@
                                     <td><%#Eval("fecha_Ingreso","{0: dd/MM/yyyy}") %> </td>
                                     <td><%#Eval("cantidadIngresada") %> </td>
                                     <td>
-                                        <a class="btn btn-sm btn-outline-info" href='EliminarStock.aspx?idS=<%#Eval("idStock") %>'><i title="Eliminar" class="fas fa-trash-alt"></i></a>
-                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i title="Modificar datos" class="far fa-edit"></i></a>
+                                        <a class="btn btn-sm btn-outline-info" href='EliminarStock.aspx?idS=<%#Eval("idStock") %>'><i title="Eliminar Stock" class="fas fa-trash-alt"></i></a>
+                                        <a class="btn btn-sm btn-outline-secondary" href='ModificarStock.aspx?idS=<%#Eval("idStock") %>'><i title="Modificar Stock" class="far fa-edit"></i></a>
                                     </td>
                                 </tr>
                             </ItemTemplate>
