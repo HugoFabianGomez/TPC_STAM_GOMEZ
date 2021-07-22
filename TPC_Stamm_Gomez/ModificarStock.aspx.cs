@@ -14,7 +14,7 @@ namespace TPC_Stamm_Gomez
         public List<Stock> UnRegistro;
         protected void Page_Load(object sender, EventArgs e)
         {
-             ModificoStockNegocio modificoStock = new ModificoStockNegocio(); //conexion
+            ModificoStockNegocio modificoStock = new ModificoStockNegocio(); //conexion
 
             try
             {
@@ -29,12 +29,12 @@ namespace TPC_Stamm_Gomez
 
                 Response.Redirect("Error.aspx");
             }
-
         }
 
         protected void txtidstock_TextChanged(object sender, EventArgs e)
         {
-           
+            
+
 
         }
 
@@ -45,11 +45,27 @@ namespace TPC_Stamm_Gomez
 
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {
+            StockNegocio stockNegocio = new StockNegocio();
+            int id = int.Parse(txtidstock.Text);
+            try
+            {
+                
+            
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+            
         }
 
         protected void txtidstock_TextChanged1(object sender, EventArgs e)
         {
+
+
+
+
 
         }
     }

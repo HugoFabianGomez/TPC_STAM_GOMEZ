@@ -15,6 +15,15 @@ namespace TPC_Stamm_Gomez
     {
 
         /// <summary>
+        /// Control btn_Mostrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Mostrar;
+
+        /// <summary>
         /// Control txtidstock.
         /// </summary>
         /// <remarks>
@@ -22,15 +31,6 @@ namespace TPC_Stamm_Gomez
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtidstock;
-
-        /// <summary>
-        /// Control btn_Modificar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Modificar;
 
         /// <summary>
         /// Control text_idstock.
@@ -85,5 +85,14 @@ namespace TPC_Stamm_Gomez
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox text_estadostock;
+
+        /// <summary>
+        /// Control btn_Modificar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Modificar;
     }
 }

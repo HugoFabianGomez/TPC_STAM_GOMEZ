@@ -115,7 +115,7 @@ namespace Negocio
                 accesoModificar.setearParametro("@fecha_ingreso", modificoStock.fecha_Ingreso);
                 accesoModificar.setearParametro("@cantidad", modificoStock.cantidadIngresada);
                 accesoModificar.setearParametro("@stock", modificoStock.stock);
-                accesoModificar.setearParametro("@id", modificoStock.id);//falta parametrizar el id de stockproducto
+                accesoModificar.setearParametro("@id", modificoStock.estado);//falta parametrizar el id de stockproducto
 
                 accesoModificar.ejectutarAccion();
             }
