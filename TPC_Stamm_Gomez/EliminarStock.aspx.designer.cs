@@ -11,52 +11,52 @@ namespace TPC_Stamm_Gomez
 {
 
 
-    public partial class CargarStock
+    public partial class EliminarStock
     {
 
         /// <summary>
-        /// Control text_idproducto.
+        /// Control text_idStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox text_idproducto;
+        protected global::System.Web.UI.WebControls.TextBox text_idStock;
 
         /// <summary>
-        /// Control text_fechaingreso.
+        /// Control txt_descripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox text_fechaingreso;
+        protected global::System.Web.UI.WebControls.TextBox txt_descripcion;
 
         /// <summary>
-        /// Control text_cantidad.
+        /// Control text_fechaIngreso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox text_cantidad;
+        protected global::System.Web.UI.WebControls.TextBox text_fechaIngreso;
 
         /// <summary>
-        /// Control text_stock.
+        /// Control text_cantidadingresada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox text_stock;
+        protected global::System.Web.UI.WebControls.TextBox text_cantidadingresada;
 
         /// <summary>
-        /// Control btn_Agregar.
+        /// Control text_estadostock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Agregar;
+        protected global::System.Web.UI.WebControls.TextBox text_estadostock;
     }
 }

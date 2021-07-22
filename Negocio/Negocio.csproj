@@ -45,6 +45,7 @@
     <Compile Include="CategoriaNegocio.cs" />
     <Compile Include="HistorialNegocio.cs" />
     <Compile Include="MarcasNegocio.cs" />
+    <Compile Include="ModificoStockNegocio.cs" />
     <Compile Include="PresentacionNegocio.cs" />
     <Compile Include="ProductoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

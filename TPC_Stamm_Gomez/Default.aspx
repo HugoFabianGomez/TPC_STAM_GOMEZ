@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    <h1>Stock</h1>
+    <h1>Conteo del Stock</h1>
 
     <div class="container">
         <div class="row py-3">

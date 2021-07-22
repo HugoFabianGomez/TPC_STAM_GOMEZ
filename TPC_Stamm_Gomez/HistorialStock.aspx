@@ -9,7 +9,7 @@
                 <div class="sticky-top">
                     <div class="nav flex-column">
                         <div class='col-xs-3'>
-                            <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Eliminar y Modificar Stock</a>
+                            <a href="CargarStock.aspx" class="btn btn-primary btn-block">Cargar Stock</a>
                             <a href="default.aspx" class="btn btn-primary btn-block">Total de Stock</a>
                         </div>
                     </div>
@@ -24,21 +24,28 @@
                             <th scope="col">Descripcion</th>
                             <th scope="col">Fecha Ingreso</th>
                             <th scope="col">Cantidad Ingresada</th>
+                            <th scope="col">Acciones</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <%foreach (Dominio.Stock item in historia)
-                            {%>
-                        <tr>
-                            <th scope="row"><% =item.idStock %></th>
-                            <td><% =item.marcas.nombreMarcas%> </td>
-                            <td><% =item.descripcion %></td>
-                            <td><% =item.fecha_Ingreso.ToShortDateString() %></td>
-                            <td><% =item.cantidadIngresada %></td>
-                        </tr>
+                        <asp:Repeater runat="server" ID="repetidor">
+                            <ItemTemplate> 
+                                <tr>
+                                    <td><%#Eval("idStock") %></td>
+                                    <td><%# DataBinder.Eval(Container.DataItem,"marcas.nombreMarcas")%> </td>
+                                    <td><%#Eval("descripcion") %></td>
+                                    <%--<td><%# DataBinder.Eval(Container.DataItem,"fecha_Ingreso") %></td>--%>
+                                    <td><%#Eval("fecha_Ingreso","{0: dd/MM/yyyy}") %> </td>
+                                    <td><%#Eval("cantidadIngresada") %> </td>
+                                    <td>
+                                        <a class="btn btn-sm btn-outline-info" href='EliminarStock.aspx?idS=<%#Eval("idStock") %>'><i title="Eliminar Stock" class="fas fa-trash-alt"></i></a>
+                                        <a class="btn btn-sm btn-outline-secondary" href='ModificarStock.aspx?idS=<%#Eval("idStock") %>'><i title="Modificar Stock" class="far fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
 
-                        <%} %>
                     </tbody>
                 </table>
             </div>
