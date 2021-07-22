@@ -27,7 +27,7 @@ namespace Negocio
                                     "inner join Marca M ON M.ID = P.IDMarca " +
                                     "INNER JOIN Presentacion PR ON PR.ID = P.IDPresentacion " +
                                     "inner join Categoria C on C.ID = P.IDCategoria " +
-                                    "Where S.Estado = 1 GROUP by  P.ID, M.NOMBRE, PR.DESCRIPCION, C.NOMBRECATEGORIA,P.DESCRIPCION ");
+                                    "GROUP by  P.ID, M.NOMBRE, PR.DESCRIPCION, C.NOMBRECATEGORIA,P.DESCRIPCION ");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -110,14 +110,12 @@ namespace Negocio
             AccesoDatos accesoModificar = new AccesoDatos();
             try
             {
-                accesoModificar.setearConsulta("update stockproductos set idproducto = @id, fecha_ingreso = @fecha_ingreso, cantidad = @cantidad, stock = @stock where id= @id");
-                
-                accesoModificar.setearParametro("@idStock", modificoStock.idStock);
-                accesoModificar.setearParametro("@idproducto", modificoStock.id);
+                accesoModificar.setearConsulta("update stockproductos set idproducto = @idproducto, fecha_ingreso = @fecha_ingreso, cantidad = @cantidad, stock = @stock where id= @id");
+                accesoModificar.setearParametro("@nombre", modificoStock.id);
                 accesoModificar.setearParametro("@fecha_ingreso", modificoStock.fecha_Ingreso);
                 accesoModificar.setearParametro("@cantidad", modificoStock.cantidadIngresada);
                 accesoModificar.setearParametro("@stock", modificoStock.stock);
-                accesoModificar.setearParametro("@estado", modificoStock.estado);//falta parametrizar el id de stockproducto
+                accesoModificar.setearParametro("@id", modificoStock.id);//falta parametrizar el id de stockproducto
 
                 accesoModificar.ejectutarAccion();
             }
@@ -150,38 +148,6 @@ namespace Negocio
                 datos.cerrarConexion();
                 datos = null;
             }
-        }
-
-        public Stock traigoidStock(int IdStock)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                datos.setearParametro("@id", IdStock);
-                datos.setearConsulta("select s.ID, p.DESCRIPCION, s.FECHA_Ingreso, s.CANTIDAD, s.stock, s.Estado from stockProductos s inner join Productos p on s.IDProducto=p.ID where s.id = " + IdStock);
-                datos.ejecutarLectura();
-                datos.Lector.Read();
-
-                Stock aux = new Stock();
-                aux.idStock = (int)datos.Lector["ID"];
-                aux.descripcion = (string)datos.Lector["DESCRIPCION"];
-                aux.fecha_Ingreso = (DateTime)datos.Lector["FECHA_Ingreso"];
-                //aux.categorias = new Categorias((string)datos.Lector["NOMBRECATEGORIA"]);
-                aux.cantidadIngresada = (int)datos.Lector["CANTIDAD"];
-                aux.stock = (int)datos.Lector["stock"];
-                aux.estadoStock = (bool)datos.Lector["Estado"];
-                return aux;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
         }
 
 

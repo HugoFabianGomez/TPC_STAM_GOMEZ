@@ -39,7 +39,7 @@
                                     <td><%# DataBinder.Eval(Container.DataItem,"categorias.nombreCategoria")%> </td>
                                     <td>
                                         <a class="btn btn-sm btn-outline-info" href='EliminarProductos.aspx?idP=<%#Eval("id") %>'><i title="Eliminar" class="fas fa-trash-alt"></i></a>
-                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i title="Modificar datos" class="far fa-edit"></i></a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="ModificarProducto.aspx?idP=<%# Eval("id") %>"><i title="Modificar datos" class="far fa-edit"></i></a>
                                     </td>
 
                                 </tr>

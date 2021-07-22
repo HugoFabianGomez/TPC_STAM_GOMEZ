@@ -32,5 +32,10 @@ namespace Dominio
         {
             return nombreCategoria;
         }
+
+        public int getId()
+        {
+            return id;
+        }
     }
 }

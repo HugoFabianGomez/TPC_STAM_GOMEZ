@@ -69,7 +69,6 @@ namespace TPC_Stamm_Gomez
             nuevo.categorias = new Categorias(idCategoria);
             nuevo.presentacion = new Presentacion(idPresentacion);
             nuevo.descripcion = txtDescripcion.Text;
-            nuevo.peso = int.Parse(txtPeso.Text);
             nuevo.precioUnitario = decimal.Parse(txtPrecio.Text);
 
             negocio.agregar(nuevo);
