@@ -16,8 +16,8 @@ namespace Negocio
             try
             {
                 dato.setearConsulta("select S.ID ID, P.DESCRIPCION Descripcion, S.FECHA_Ingreso Fecha, S.CANTIDAD Cantidad," +
-                                    "M.NOMBRE Marca  from StockProductos S inner join Productos P on S.idproducto = P.ID " +
-                                    "inner join Marca M on M.ID = P.IDMarca");
+                                    "M.NOMBRE Marca, P.id idproducto from StockProductos S inner join Productos P on S.idproducto = P.ID " +
+                                    "inner join Marca M on M.ID = P.IDMarca where S.Estado = 1");
                 dato.ejecutarLectura();
 
                 while (dato.Lector.Read())
@@ -29,6 +29,8 @@ namespace Negocio
                     aux2.cantidadIngresada = (int)dato.Lector["Cantidad"];
                     aux2.marcas = new Marcas((string)dato.Lector["Marca"]);
                     aux2.marcas.nombreMarcas = (string)dato.Lector["Marca"];
+                    aux2.id = (int)dato.Lector["idproducto"];
+
 
                     historial.Add(aux2);
                 }
