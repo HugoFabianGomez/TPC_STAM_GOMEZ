@@ -10,28 +10,36 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">IDSTOCK</th>
+                            <th scope="col" >IDSTOCK</th>
                             <th scope="col">DESCRIPCION</th>
                             <th scope="col">FECHA INGRESO</th>
                             <th scope="col">CANTIDAD INGRESADA</th>
                             <th scope="col">STOCK</th>
                             <th scope="col">ESTADO</th>
+                            <th scope="col">IDPRODUCTO</th>
 
                         </tr>
                     </thead>
                     <tbody>
 
                     </tbody>
+                <asp:UpdatePanel runat="server">
+                    <ContentTemplate>
                 </table>
-                    <asp:TextBox runat="server" ID="text_idstock" TextMode="Number"/>
-                    <asp:TextBox runat="server" ID="text_descripcion" />
+                    <asp:TextBox runat="server" ID="text_idstock" TextMode="Number" Width="95px"/>
+                    <asp:TextBox runat="server" ID="text_descripcion" Width="200px" />
                     <asp:TextBox runat="server" ID="text_fechaingreso" TextMode="DateTime" />
-                    <asp:TextBox runat="server" ID="text_cantidad" TextMode="Number" />
-                    <asp:TextBox runat="server" ID="text_stock" TextMode="Number" />
-                    <asp:TextBox runat="server" ID="text_estadostock" />
+                    <asp:TextBox runat="server" ID="text_cantidad" TextMode="Number" OnTextChanged="text_cantidad_TextChanged" Width="200px" />
+                    <asp:TextBox runat="server" ID="text_stock" TextMode="Number" Width="150px" />
+                    <asp:TextBox runat="server" ID="text_estadostock" Width="100px" />
+                    <asp:TextBox runat="server" ID="text_idproducto" TextMode="Number" Width="100px" />
 
                 <br />
-                <asp:Button Text="btn_modificar" ID="btn_Modificar" runat="server" onclick="btn_Modificar_Click"/>
+                <br />
+                        <asp:Button Text="MODIFICAR STOCK" ID="btn_Modificar" runat="server" onclick="btn_Modificar_Click"/>
+
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
         </div>
     </div>
