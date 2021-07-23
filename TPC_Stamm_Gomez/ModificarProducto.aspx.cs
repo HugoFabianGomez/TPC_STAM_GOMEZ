@@ -72,6 +72,9 @@ namespace TPC_Stamm_Gomez
         }
         protected void Modificar_Click(object sender, EventArgs e)
         {
+            nuevo.precioUnitario = decimal.Parse(Session["precioProductoModificar"].ToString());
+            nuevo.descripcion = Session["descripcionProductoModificar"].ToString();
+            
             if (txtDescripcion1.Text != "")
             {
                 nuevo.descripcion = txtDescripcion1.Text;
@@ -84,8 +87,6 @@ namespace TPC_Stamm_Gomez
             nuevo.marcas=new Dominio.Marcas(int.Parse(Session["idMarcaModificar"].ToString()));
             nuevo.presentacion=new Presentacion (int.Parse(Session["idPresentacionModificar"].ToString()));
             nuevo.id = int.Parse(Session["idProductoModificar"].ToString());
-            nuevo.precioUnitario = decimal.Parse(Session["precioProductoModificar"].ToString());
-            nuevo.descripcion = Session["descripcionProductoModificar"].ToString();
 
             conexion.modificar(nuevo);
 

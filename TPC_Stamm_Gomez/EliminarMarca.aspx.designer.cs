@@ -11,16 +11,25 @@ namespace TPC_Stamm_Gomez
 {
 
 
-    public partial class Marcas
+    public partial class EliminarMarca
     {
 
         /// <summary>
-        /// repetidor control.
+        /// txtID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repetidor;
+        protected global::System.Web.UI.WebControls.TextBox txtID;
+
+        /// <summary>
+        /// txtMarca control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMarca;
     }
 }

@@ -15,7 +15,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("SELECT ID ,NOMBRE from  Marca");
+                datos.setearConsulta("SELECT ID ,NOMBRE from  Marca where Estado=1");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -71,6 +71,52 @@ namespace Negocio
         }
 
 
+
+        public Marcas cargarMarca(int idMarc)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearParametro("@idM", idMarc);
+                datos.setearConsulta("SELECT ID,NOMBRE from Marca where ID=@idM");
+                datos.ejecutarLectura();
+                datos.Lector.Read();
+
+                Marcas aux = new Marcas();
+                aux.idMarcas = (int)datos.Lector["ID"];
+                aux.nombreMarcas = (string)datos.Lector["NOMBRE"];
+                return aux;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void eliminarMarca(int idMarca)//Baja loogica
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE Marca set ESTADO = 0  WHERE ID=" + idMarca + "");
+                datos.ejectutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
 
