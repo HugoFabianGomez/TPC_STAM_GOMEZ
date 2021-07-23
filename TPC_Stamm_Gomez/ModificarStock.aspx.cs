@@ -9,32 +9,31 @@ using Negocio;
 
 namespace TPC_Stamm_Gomez
 {
-    public partial class ModificarStock : System.Web.UI.Page
-    {
-        public List<Stock> UnRegistro;
+	public partial class ModificarStock : System.Web.UI.Page
+	{
+        public Stock nuevo = new Stock();
+        StockNegocio conexion = new StockNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtidstock.Text = (string)"55";
+            if (Request.QueryString["idS"] != null)
+            {
+
+                int IdStock = int.Parse(Request.QueryString["idS"].ToString());
+                Session["idStock"] = IdStock;
+                nuevo = conexion.traigoidStock(IdStock);
+                text_idstock.Text = nuevo.idStock.ToString();
+                text_descripcion.Text = nuevo.descripcion;
+                text_fechaingreso.Text = nuevo.fecha_Ingreso.ToShortDateString();
+                text_cantidad.Text = nuevo.cantidadIngresada.ToString();
+                text_stock.Text = nuevo.stock.ToString();
+                text_estadostock.Text = nuevo.estadoStock.ToString();
+            }
         }
 
         protected void txtidstock_TextChanged(object sender, EventArgs e)
         {
-            ModificarStockNegocio modificarStock = new ModificarStockNegocio(); //conexion
 
 
-            try
-            {
-                int id = int.Parse(txtidstock.Text);
-                UnRegistro = modificarStock.Listamodificarstock(id);
-                //PROBLEMA NO TRAE AL "Listamodificarstock" DICE NO EXISTE EN EL CONTEXTO;
-
-            }
-            catch (Exception ex)
-            {
-                Session.Add("Error", ex.ToString());
-
-                Response.Redirect("Error.aspx");
-            }
 
         }
 
@@ -45,11 +44,17 @@ namespace TPC_Stamm_Gomez
 
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {
+            int idStock = int.Parse(text_idstock.Text);
 
+            //conexion.modificar(idStock);
         }
 
         protected void txtidstock_TextChanged1(object sender, EventArgs e)
         {
+
+
+
+
 
         }
     }
