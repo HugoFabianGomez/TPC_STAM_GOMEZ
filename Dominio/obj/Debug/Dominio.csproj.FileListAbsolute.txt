@@ -15,3 +15,9 @@ C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.AssemblyR
 C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.dll
 C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.pdb
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Dominio\bin\Debug\Dominio.dll
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Dominio\bin\Debug\Dominio.pdb
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.dll
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Dominio\obj\Debug\Dominio.pdb

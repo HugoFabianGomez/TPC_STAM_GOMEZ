@@ -25,3 +25,12 @@ C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CopyCompl
 C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.dll
 C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.pdb
 C:\Users\walte\Desktop\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\bin\Debug\Negocio.dll
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\bin\Debug\Negocio.pdb
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\bin\Debug\Dominio.dll
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\bin\Debug\Dominio.pdb
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.dll
+C:\Users\walte\Desktop\New folder\TPC_STAM_GOMEZ\Negocio\obj\Debug\Negocio.pdb

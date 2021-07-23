@@ -15,11 +15,12 @@ namespace TPC_Stamm_Gomez
         protected void Page_Load(object sender, EventArgs e)
         {
             MarcasNegocio marcasNegocios = new MarcasNegocio();
+           
 
             try
             {
-                //marcas = marcasNegocios.listaMarcas   .listaMarcas(); //marcasNegocio es la conexion listaMarcas es la funcion 
-
+                repetidor.DataSource = marcasNegocios.listar();
+                repetidor.DataBind();
             }
             catch (Exception ex)
             {
