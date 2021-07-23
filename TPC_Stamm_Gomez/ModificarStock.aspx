@@ -45,39 +45,4 @@
     </div>
 
 
-
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           <%-- <div class="form-group">
-                <div class="row">
-                    <div class="col">
-                        <asp:Label Text="text" runat="server" ID="lblNombre" />
-                    </div>
-                    <div class="col">
-                        <asp:TextBox AutoPostBack="true" runat="server" ID="txtNombre" OnTextChanged="txtNombre_TextChanged" CssClass="form-control" />
-                    </div>
-                    <div class="col">
-                        <asp:Button Text="Aceptar" CssClass="form-control" runat="server" ID="btnAceptar" OnClick="btnAceptar_Click" />
-                    </div>
-                </div>
-            </div>--%>
-
-
-
 </asp:Content>

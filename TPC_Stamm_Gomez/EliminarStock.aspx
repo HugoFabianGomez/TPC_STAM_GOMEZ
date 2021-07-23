@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EliminarStock.aspx.cs" Inherits="TPC_Stamm_Gomez.EliminarStock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
     <div class="form-group">
+    <br />
+    <br />
         <asp:Label Text="IdStock" runat="server" />
         <asp:TextBox runat="server" ID="text_idStock" Enabled="false"/>
 
@@ -35,13 +36,5 @@
         <asp:Button Text="EliminarStock" OnClick="EliminarStock_Click" runat="server" />
 
     </div>
-
-
-
-
-
-
-
-
 
 </asp:Content>

@@ -9,8 +9,8 @@ using Negocio;
 
 namespace TPC_Stamm_Gomez
 {
-    public partial class EliminarStock : System.Web.UI.Page
-    {
+	public partial class EliminarStock : System.Web.UI.Page
+	{
         public Stock nuevo = new Stock();
         StockNegocio conexion = new StockNegocio();
         protected void Page_Load(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace TPC_Stamm_Gomez
             int idstock = int.Parse(text_idStock.Text);
 
             conexion.eliminar(idstock);
-            Response.Redirect("EliminarStock.aspx");
+            Response.Redirect("HistorialStock.aspx");
 
         }
     }
